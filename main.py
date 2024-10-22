@@ -2,29 +2,26 @@
 
 import kivy
 import kivymd
-from kivymd.app import App
+from kivymd.app import MDApp
 from kivy.lang import Builder
-from kivymd.uix.screenmanager import ScreenManager
-from kivymd.uix.screen import Screen
-from kivymd.uix.widget import Widget
-from kivymd.uix.floatlayout import FloatLayout
-from kivy.uix.label import Label
-from kivy.uix.button import Button
+from kivymd.uix.screenmanager import MDScreenManager
+from kivymd.uix.screen import MDScreen
 
-class StartWindow(Screen):
+class StartWindow(MDScreen):
     pass
 
-class MainWindow(Screen):
+class MainWindow(MDScreen):
     pass
 
-class WindowManager(ScreenManager):
+class WindowManager(MDScreenManager):
     pass
 
-kv = Builder.load_file("timespenton.kv")
-
-class TimeSpentOn(App):
+class TimeSpentOn(MDApp):
     def build(self):
         self.title = "Time Spent On"
+        self.theme_cls.theme_style = "Dark"
+
+        kv = Builder.load_file("timespenton.kv")
         return kv
 
 if __name__ == "__main__":
