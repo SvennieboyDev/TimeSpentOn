@@ -31,11 +31,13 @@ WindowManager:
 
     FloatLayout:
 
-        MDRaisedButton:
+        MDRectangleFlatButton:
             text: "Back"
             pos_hint: {"center_x": 0.9, "center_y": 0.9}
             size_hint: None, None
             size: "100dp", "100dp"
+            line_color: [0, 0, 0, 0]
+            md_bg_color: app.theme_cls.primary_dark
             font_style: "H6"
             on_release:
                 app.root.current = "start"
