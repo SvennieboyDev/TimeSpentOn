@@ -29,16 +29,15 @@ WindowManager:
 <MainWindow>:
     name: "main"
 
-    FloatLayout:
+    MDFloatLayout:
 
         MDRectangleFlatButton:
             text: "Back"
-            pos_hint: {"center_x": 0.9, "center_y": 0.9}
-            size_hint: None, None
-            size: "100dp", "100dp"
+            pos_hint: {"center_x": 0.925, "center_y": 0.9}
+            _min_width: 75
+            _min_height: 75
             line_color: [0, 0, 0, 0]
             md_bg_color: app.theme_cls.primary_dark
-            font_style: "H6"
             on_release:
                 app.root.current = "start"
                 root.manager.transition.direction = "right"
