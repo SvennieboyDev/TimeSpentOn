@@ -20,6 +20,7 @@ class TimeSpentOn(MDApp):
     def build(self):
         self.title = "Time Spent On"
         self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "Gray"
 
         kv = Builder.load_file("timespenton.kv")
         return kv

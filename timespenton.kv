@@ -7,15 +7,35 @@ WindowManager:
     MainWindow:
 
 <StartWindow>:
-
     name: "start"
 
     FloatLayout:
 
         MDLabel:
             text: "Time Spent On"
+            pos_hint: {"center_x": 0.5, "center_y": 0.8}
+            font_style: "H3"
             halign: "center"
+        
+        MDRaisedButton:
+            text: "Initiate"
+            pos_hint: {"center_x": 0.5, "center_y": 0.3}
+            size_hint: 0.3, 0.2
+            font_style: "H4"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "left"
 
 <MainWindow>:
-    MDLabel:
-        text: "Under Construction"
+    name: "main"
+
+    FloatLayout:
+
+        MDRaisedButton:
+            text: "Back"
+            pos_hint: {"center_x": 0.9, "center_y": 0.9}
+            size: "100dp", "100dp"
+            font_style: "H6"
+            on_release:
+                app.root.current = "start"
+                root.manager.transition.direction = "right"
