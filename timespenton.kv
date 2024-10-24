@@ -28,16 +28,24 @@ WindowManager:
 
 <MainWindow>:
     name: "main"
+        
+    MDGridLayout:
+        cols: 4
 
-    MDFloatLayout:
+        MDGridLayout:
+            cols: 1
+
+            MDTextField:
+                #mode: "outlined"
+                
+            MDRectangleFlatButton:
+                text: "Confirm"
+            
+        MDTextField:
+            text: "New Subject"
 
         MDRectangleFlatButton:
-            text: "Back"
-            pos_hint: {"center_x": 0.925, "center_y": 0.9}
-            _min_width: 75
-            _min_height: 75
-            line_color: [0, 0, 0, 0]
-            md_bg_color: app.theme_cls.primary_dark
-            on_release:
-                app.root.current = "start"
-                root.manager.transition.direction = "right"
+            text: "Add Time"
+            
+        MDLabel:
+            text: "Time: "
