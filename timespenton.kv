@@ -1,0 +1,30 @@
+#:kivy 2.3.0
+
+WindowManager:
+    MainWindow:
+
+<MainWindow>:
+    name: "main"
+
+    MDGridLayout:
+        cols: 4
+
+        MDGridLayout:
+            cols: 1
+
+            MDTextField:
+                text: "New Subject"
+            
+            MDRectangleFlatButton:
+                text: "Confirm"
+        
+        MDTextField:
+            text: "0"
+        
+        MDRectangleFlatButton:
+            halign: "center"
+            text: "Add Time"
+        
+        MDLabel:
+            halign: "center"
+            text: "Time: "
