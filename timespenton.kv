@@ -7,24 +7,88 @@ WindowManager:
     name: "main"
 
     MDGridLayout:
-        cols: 4
+        cols: 1
+        padding: 20
+        spacing: 10
 
         MDGridLayout:
-            cols: 1
+            cols: 4
+            spacing: 10
+            size_hint_y: None
+            height: self.minimum_height
+
+            MDGridLayout:
+                cols: 1
+                size_hint_x: 0.4
+
+                MDTextField:
+                    hint_text: "New Subject"  # Change 'text' to 'hint_text' for placeholder text
+                    multiline: False
+                    size_hint_y: None
+                    height: "40dp"
+
+                MDRectangleFlatButton:
+                    text: "Confirm"
+                    size_hint_y: None
+                    height: "40dp"
 
             MDTextField:
-                text: "New Subject"
-            
+                text: "0"
+                halign: "center"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "40dp"
+
             MDRectangleFlatButton:
-                text: "Confirm"
+                text: "Add Time"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "40dp"
+
+            MDLabel:
+                text: "Time: "
+                halign: "center"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "40dp"
         
-        MDTextField:
-            text: "0"
-        
-        MDRectangleFlatButton:
-            halign: "center"
-            text: "Add Time"
-        
-        MDLabel:
-            halign: "center"
-            text: "Time: "
+        MDGridLayout:
+            cols: 4
+            spacing: 10
+            size_hint_y: None
+            height: self.minimum_height
+
+            MDGridLayout:
+                cols: 1
+                size_hint_x: 0.4
+
+                MDTextField:
+                    hint_text: "New Subject"
+                    multiline: False
+                    size_hint_y: None
+                    height: "40dp"
+
+                MDRectangleFlatButton:
+                    text: "Confirm"
+                    size_hint_y: None
+                    height: "40dp"
+
+            MDTextField:
+                text: "0"
+                halign: "center"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "50dp"
+
+            MDRectangleFlatButton:
+                text: "Add Time"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "40dp"
+
+            MDLabel:
+                text: "Time: "
+                halign: "center"
+                size_hint_x: 0.2
+                size_hint_y: None
+                height: "40dp"
